@@ -177,4 +177,32 @@ CREATE TABLE IF NOT EXISTS costumer_library_link
         (7,2),
         (8,2);
 
+
+  
+ -- Change the order status--------------------------------------------------------------------------------------------------------------
+ 
+UPDATE orders
+SET order_status = "Package missing in trasport!"
+WHERE order_id = 2;
+ 
+ 
+-- Insert a new order to orders----------------------------------------------------------------------------------------------------------
+
+INSERT INTO orders VALUES
+	(DEFAULT, 1, "2023-09-27", "Order recived", 4);
+INSERT INTO product_order_link VALUES
+(4,4);
+
+
+-- Delete a order_id from orders----------------------------------------------------------------------------------------------------------
+
+DELETE FROM orders
+WHERE order_id = 3;
+
+
+-- Change column order_status max char to 50-----------------------------------------------------------------------------------------------
+
+ALTER TABLE orders
+MODIFY order_status VARCHAR (50);
+
   
