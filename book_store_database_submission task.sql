@@ -1,4 +1,4 @@
-
+-- Hello daniel
 -- Welcome to the Book Store! 
 -- 1 all tables along with their values
 -- 2 all link tables
